@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>The Spice</title>
+    <script src="static/utility.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      #section1 {
+        height: 600px;
+        background-color: #191919;
+      }
+      #section2 {
+        height: 600px;
+        background-color:#191919;
+      }
+      #section3 {
+        height: 600px;
+        background-color:#191919;
+      }
+      #section4 {
+        height: 800px;
+        background-color:#191919;
+      }
+        body {
+        background-color: #191919;
+        }
+      </style>
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position:fixed top:0">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../static/spice.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link "  href="{{url_for('home')}}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "  href="{{url_for('menu')}}">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "  href="{{url_for('about')}}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "  href="{{url_for('contact')}}">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+
+    <div class="main" id="section1">
+      <h1>Menu</h1>
+      <br><br>
+      <center>
+      <a style="font-size: 12mm;" href="#section2">Main Menu</a><br>
+      <a style="font-size: 12mm;" href="#section3">Starters</a><br>
+      <a style="font-size: 12mm;" href="#section4">Drinks&Desserts</a><br>
+
+      </center>
+      
+    </div>
+    
+    <div class="main" id="section2">
+      <h2>Main Menu</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/chickb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chicken Biryani</h5>
+              <p class="card-text">Price - 250 per one </p>
+              <form name="my_form">
+                Enter quantity: &nbsp; <input type="text" name = "a" value = 0 ><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/prawn.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Prawns Biryani</h5>
+              <p class="card-text">Price - 300 </p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "b"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">	
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/eggbiryani.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Egg Biryani</h5>
+              <p class="card-text">Price - 150</p>
+                Enter quantity: &nbsp; <input type="number"  value=0 name = "c"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/mutton.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mutton Biryani</h5>
+              <p class="card-text">Price - 450</p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "d"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main" id="section3">
+      <h2>Starters</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/lolli.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chilli Chicken Lollipops</h5>
+              <p class="card-text">Price - 300[6 pieces]</p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "e"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">>	
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/munchuria.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chicken Manchurian</h5>
+              <p class="card-text">Price - 200 </p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "f"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">	
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/ChickenKebab.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chicken Kabab</h5>
+              <p class="card-text">Price - 400</p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "g"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">	
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/fishfry.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Fish Fry</h5>
+              <p class="card-text">Price  -  200[4 pieces]</p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "h"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">	
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main" id="section4">
+      <h2>Extras</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/maltesers.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Maltesers Tiramisu</h5>
+              <p class="card-text">Price - 400</p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "i"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">	
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/coke.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Coke</h5>
+              <p class="card-text">Price - 100</p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "j"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">	
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="../static/shake.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chocolate Milkshake</h5>
+              <p class="card-text">Price - 150</p>
+                Enter quantity: &nbsp; <input type="number" value=0 name = "k"><br><br>
+                <input type="button" class="btn btn-primary" onclick="submitData('submitJSON')" value="Add">
+              </form>	
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br><br><br><br>
+
+      <a href="{{url_for('bill')}}" type="button" class="btn btn-success">Place Order</a>
+
+      <br><br>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+    <script src="../static/my.js"></script>
+  </body>
+</html>

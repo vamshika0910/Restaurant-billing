@@ -1,0 +1,96 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Your Order</title>
+    <style>
+      table{
+        font-size: 40px;
+      }
+      body{
+        background-image: linear-gradient(rgba(182, 179, 179, 0.7),rgba( 182, 179, 179,0.7)), url(https://ilarahotels.com/assets/img/logos/the-spice-logo-new.png);
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position:fixed top:0">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../static/spice.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link"  href="{{url_for('home')}}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="{{url_for('menu')}}">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="{{url_for('about')}}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="{{url_for('contact')}}">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <h1>Your Order</h1><br>
+    <table>
+      <thead>
+          <th>Items</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+      </thead>
+      <tbody>
+      {% for i in range(11) %}
+        {% if  quantity[i]!=0 %}
+          <tr>
+            <td>
+              {{items[i]}}
+            </td>
+            <td>
+              {{quantity[i]}}
+            </td>
+            <td>
+              {{price[i]}}
+            </td>
+            <td>
+              {{total[i]}}
+            </td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+  <br>
+  <br><br>
+    <h2>--------------------------------------------------------</h2>
+    <h2>Total Bill=&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{cost}}</h2>
+    <h2>--------------------------------------------------------</h2>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html> -->
